@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title>cara singkat</title>
+    </head>
+    <body>
+        <p><p id="carasingkat"></p></p> <a id="link"></a> 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script>
+            var count = 10; // dalam detik
+            function countDown() {
+                if (count >= 0) {
+                    count--;
+                    var waktu = count + 1;
+                    $('#carasingkat').html('Kirim Ulang Email Dalam ' +waktu + ' detik.');
+                    setTimeout("countDown()", 1000);
+                } else {
+                    document.getElementById("link").innerHTML = 'Kirim Ulang';
+                    document.getElementById("carasingkat").innerHTML = '';
+                }
+            }
+            countDown();
+        </script>
+    </body>
+</html>
